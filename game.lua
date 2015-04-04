@@ -1,16 +1,18 @@
 Game = Core.class(Stage)
 
+nbOid = 0
 local function onTouchesBegin(event)
+	nbOid = nbOid + 1
 	
-	print(event.touch.id)
+	print(event.allTouches[1].x)
 	
-	if event.touch.id == 2 then
+	if event.allTouches[2] ~= nil and event.touch.id == 2  then
 		if event.allTouches[2].x < application:getContentWidth()*0.25 then
 			ship1:moveX("moveLeft")
 		elseif event.allTouches[2].x > application:getContentWidth()*0.75 then
 			ship1:moveX("moveRight")
 		end
-	elseif event.touch.id == 1 then
+	elseif event.touch.id == 1 and event.allTouches[1] ~= nil then
 		if event.allTouches[1].x < application:getContentWidth()*0.25 then
 			ship1:moveX("moveLeft")
 		elseif event.allTouches[1].x > application:getContentWidth()*0.75 then
@@ -24,7 +26,7 @@ local function onTouchesBegin(event)
 end
 --pokjhgfd
 local function onTouchesEnd(event)
-
+	nbOid = nbOid - 1
 	print(event.allTouches[1].x)
 
 	if event.touch.id == 2 and event.allTouches[1] ~= nil then
@@ -44,6 +46,7 @@ local function onTouchesEnd(event)
 	end
 end
 
+stage:addEventListener(Event.TOUCHES_END, onTouchesEnd)
 stage:addEventListener(Event.TOUCHES_END, onTouchesEnd)
 stage:addEventListener(Event.TOUCHES_BEGIN, onTouchesBegin)
 

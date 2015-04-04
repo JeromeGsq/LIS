@@ -9,7 +9,7 @@ function Enemy:init()
 	self.img = Bitmap.new(Texture.new("img/asteroid.png",true))
 	
 	self.img:setPosition(self.x,self.y)
-	
+	self.img:setAnchorPoint(0.5, 0.5)
 
 	self:addEventListener(Event.ENTER_FRAME, self.onEnterFrame, self)
 	stage:addChild(self.img)

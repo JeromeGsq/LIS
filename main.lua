@@ -3,6 +3,6 @@ ship1 = Ship.new(application:getContentWidth()/2,90*application:getContentHeight
 
 asteTab = {}
 
-for i=1,8 do
+for i=1,800 do
 	asteTab[i] = Enemy.new()
 end

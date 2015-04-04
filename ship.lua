@@ -4,7 +4,7 @@ function Ship:init(x,y)
 
 	self.statut = "wait"
 	
-	self.speed = 2
+	self.speed = 20
 	self.x = x
 	self.y = y
 	
@@ -28,7 +28,7 @@ function Ship:moveY(moving)
 end
 
 function Ship:onEnterFrame(event)
-
+	if nbOid == 0 then self.statut = "wait" end
 	self.img:setPosition(self.x,self.y)
 	
 	if self.statut == "moveLeft" then
