@@ -22,7 +22,7 @@ local function onTouchesBegin(event)
 	
 
 end
---pokjhgfd
+--pokjhgfdex
 local function onTouchesEnd(event)
 
 	print(event.allTouches[1].x)
