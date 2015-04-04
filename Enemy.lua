@@ -1,7 +1,7 @@
 Enemy = Core.class(Sprite)
 
 function Enemy:init()
-
+ 
 	self.speed = 10
 	self.x = math.random(0, application:getContentWidth())
 	self.y = math.random(-100*application:getContentHeight()/100, -20*application:getContentHeight()/100)

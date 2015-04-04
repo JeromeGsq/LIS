@@ -1,7 +1,7 @@
 Game = Core.class(Stage)
 
 local function onTouchesBegin(event)
-	
+	 
 	print(event.touch.id)
 	
 	if event.touch.id == 2 then

@@ -1,5 +1,5 @@
 ship1 = Ship.new(application:getContentWidth()/2,90*application:getContentHeight()/100)
-
+ 
 
 asteTab = {}
 

@@ -1,6 +1,6 @@
 Item = Core.class(sprite)
 
-
+ 
 function Enemy:Item()
 
 	self.speed = 10

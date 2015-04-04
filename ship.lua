@@ -1,7 +1,7 @@
 Ship = Core.class(Sprite)
 
 function Ship:init(x,y)
-
+ 
 	self.statut = "wait"
 	
 	self.speed = 2
