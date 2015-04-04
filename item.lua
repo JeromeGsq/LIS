@@ -1,17 +1,17 @@
 Item = Core.class(sprite)
 
 
-function Enemy:Item()
+function Item:init()
 
 	self.speed = 10
-	self.x = math.random(0, application:getContentWidth())
-	self.y = math.random(-100*application:getContentHeight()/100, -20*application:getContentHeight()/100)
 	
-	self.img = Bitmap.new(Texture.new("img/asteroid.png",true))
+	self.x = math.random(0, application:getContentWidth())
+	self.y = application:getContentHeight()*0.9
+	
+	self.img = Bitmap.new(Texture.new("img/nrj.png",true))
 	
 	self.img:setPosition(self.x,self.y)
-	
+	self.img:setAnchorPoint(0.5, 0.5)
 
-	self:addEventListener(Event.ENTER_FRAME, self.onEnterFrame, self)
 	stage:addChild(self.img)
 end

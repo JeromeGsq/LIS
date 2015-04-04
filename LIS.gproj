@@ -1,7 +1,8 @@
 <project>
- <properties iosDevice="0" touchToMouse="1" encryptAssets="0" logicalWidth="1080" autorotation="0" fps="60" encryptCode="0" scaleMode="5" logicalHeight="1920" mouseTouchOrder="0" architecture="0" packageName="com.yourdomain.yourapp" assetsOnly="0" mouseToTouch="1" retinaDisplay="0" orientation="1">
+ <properties assetsOnly="0" packageName="com.yourdomain.yourapp" iosDevice="0" encryptAssets="0" logicalWidth="1080" mouseTouchOrder="0" autorotation="0" orientation="1" architecture="0" logicalHeight="1920" scaleMode="5" mouseToTouch="1" retinaDisplay="0" fps="60" touchToMouse="1" encryptCode="0">
   <imageScales/>
  </properties>
+ <file source="vie.lua"/>
  <folder name="Img">
   <file source="img/vaisseaux.png"/>
   <file source="img/UI.png"/>
@@ -16,8 +17,13 @@
   <file source="img/asteroid.png"/>
  </folder>
  <file source="Enemy.lua"/>
- <file source="game.lua"/>
  <file source="item.lua"/>
  <file source="main.lua"/>
  <file source="ship.lua"/>
+ <file source="game.lua"/>
+ <dependency from="game.lua" to="Enemy.lua"/>
+ <dependency from="game.lua" to="item.lua"/>
+ <dependency from="game.lua" to="ship.lua"/>
+ <dependency from="game.lua" to="vie.lua"/>
+ <dependency from="main.lua" to="game.lua"/>
 </project>
