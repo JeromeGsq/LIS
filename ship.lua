@@ -17,7 +17,7 @@ function Ship:init(x,y)
 	self.Life1 = Vie.new(837,27)
 	self.Life2 = Vie.new(901,27)
 	self.Life3 = Vie.new(965,27)
-
+	
 	self:addEventListener(Event.ENTER_FRAME, self.onEnterFrame, self)
 
 	stage:addChild(self.img)
@@ -51,7 +51,6 @@ function Ship:outofscreen()
 end
 
 function Ship:die()
-
 	if self.vie == 0 then self.vie = -1 end
 	if self.vie == 1 then self.vie = 0 end
 	if self.vie == 2 then self.vie = 1 end

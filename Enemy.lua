@@ -40,9 +40,12 @@ function Enemy:Collision()
 		if self.x -40 > self.ObjetCollision:getX() - 47 and self.x -40 < self.ObjetCollision:getX() + 47 then
 			Game:resetAsteroid()
 			self.ObjetCollision:die()
+			application:vibrate() 
 		elseif self.x +40 > self.ObjetCollision:getX() - 47 and self.x +40 < self.ObjetCollision:getX() + 47 then
 			Game:resetAsteroid()
 			self.ObjetCollision:die()
+			application:vibrate()
+
 		end
 	end
 
