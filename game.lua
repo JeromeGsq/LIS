@@ -19,12 +19,12 @@ NRJ = Item.new(ship1)
 
 asteTab = {}
 
-for i=1,8 do
+for i=1,20 do
 	asteTab[i] = Enemy.new(ship1)
 end
 
 function Game:resetAsteroid()
-	for i=1,8 do
+	for i=1,#asteTab do
 		asteTab[i]:hit()
 	end
 end
