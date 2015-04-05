@@ -1,17 +1,36 @@
-Item = Core.class(sprite)
+Item = Core.class(Sprite)
 
- 
-function Enemy:Item()
 
+function Item:init(ObjetCollision)
+
+	self.valeur = 100
 	self.speed = 10
-	self.x = math.random(0, application:getContentWidth())
-	self.y = math.random(-100*application:getContentHeight()/100, -20*application:getContentHeight()/100)
+	self.ObjetCollision = ObjetCollision
 	
-	self.img = Bitmap.new(Texture.new("img/asteroid.png",true))
+	self.x = math.random(0, application:getContentWidth())
+	self.y = application:getContentHeight()*0.9
+	
+	self.img = Bitmap.new(Texture.new("img/nrj.png",true))
 	
 	self.img:setPosition(self.x,self.y)
-	
+	self.img:setAnchorPoint(0.5, 0.5)
 
-	self:addEventListener(Event.ENTER_FRAME, self.onEnterFrame, self)
 	stage:addChild(self.img)
+	self:addEventListener(Event.ENTER_FRAME, self.onEnterFrame, self)
+end
+
+function Item:onEnterFrame(event)
+
+	self.img:setPosition(self.x,self.y)
+	self:Collision()
+end
+
+function Item:Collision()
+
+		if self.x > self.ObjetCollision:getX() - 47 and self.x < self.ObjetCollision:getX() + 47 then
+			self.x = math.random(0, application:getContentWidth())
+			score = score + self.valeur
+			print(score)
+		end
+
 end
