@@ -4,7 +4,7 @@ nbOid = 0
 score = 0
 --------------------------------------------------------------
 ------------------------- fonts ------------------------------
-local font1 = TTFont.new("fonts/visitor1.ttf", 75) 
+local font1 = TTFont.new("fonts/visitor1.ttf", application:getContentHeight()*0.07) 
 
 --------------------------------------------------------------
 
