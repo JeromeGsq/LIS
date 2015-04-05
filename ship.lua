@@ -38,7 +38,16 @@ function Ship:onEnterFrame(event)
 	elseif self.statut == "moveRight" then
 		self.x = self.x + self.speed
 	end
+	self:outofscreen()
+end
 
+function Ship:outofscreen()
+	if self.x > 1926 then 
+		self.x = -5
+	end
+	if self.x < -6 then 
+		self.x = 1925
+	end
 end
 
 function Ship:die()

@@ -2,6 +2,9 @@
  <properties assetsOnly="0" packageName="com.yourdomain.yourapp" iosDevice="0" encryptAssets="0" logicalWidth="1080" mouseTouchOrder="0" autorotation="0" orientation="1" architecture="0" logicalHeight="1920" scaleMode="5" mouseToTouch="1" retinaDisplay="0" fps="60" touchToMouse="1" encryptCode="0">
   <imageScales/>
  </properties>
+ <folder name="fonts">
+  <file source="font/visitor1.ttf"/>
+ </folder>
  <file source="vie.lua"/>
  <folder name="Img">
   <file source="img/vaisseaux.png"/>
@@ -23,7 +26,7 @@
  <file source="game.lua"/>
  <dependency from="game.lua" to="Enemy.lua"/>
  <dependency from="game.lua" to="item.lua"/>
- <dependency from="game.lua" to="ship.lua"/>
  <dependency from="game.lua" to="vie.lua"/>
+ <dependency from="game.lua" to="ship.lua"/>
  <dependency from="main.lua" to="game.lua"/>
 </project>

@@ -1,13 +1,21 @@
 Game = Core.class(Stage)
+------------------------ variables ---------------------------
 nbOid = 0
+score = 0
+--------------------------------------------------------------
+------------------------- fonts ------------------------------
+local font1 = TTFont.new("fonts/visitor1.ttf", 75) 
+
+--------------------------------------------------------------
 
 bck = Bitmap.new(Texture.new("img/background.png", false))
 stage:addChild(bck)
 
 
-NRJ = Item.new()
-ship1 = Ship.new(application:getContentWidth()/2,90*application:getContentHeight()/100)
 
+
+ship1 = Ship.new(application:getContentWidth()/2,90*application:getContentHeight()/100)
+NRJ = Item.new(ship1)
 
 asteTab = {}
 
@@ -23,7 +31,10 @@ end
 ui = Bitmap.new(Texture.new("img/UI.png", false))
 stage:addChild(ui)
 
+function Game:init()
 
+	self:addEventListener(Event.ENTER_FRAME, self.onEnterFrame, self)
+end
 
 local function onTouchesBegin(event)
 	nbOid = nbOid + 1
@@ -64,6 +75,16 @@ local function onTouchesEnd(event)
 		ship1:moveX("wait")
 	end
 end
+
+local label = TextField.new(font1, score) 
+label:setPosition(400, 150) 
+label:setTextColor(0xffffff)
+stage:addChild(label)
+
+function Game:onEnterFrame(event)
+	label:setText(score)
+end
+
 
 
 stage:addEventListener(Event.TOUCHES_END, onTouchesEnd)

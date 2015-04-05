@@ -36,10 +36,10 @@ function Enemy:outOfScreen()
 end
 
 function Enemy:Collision()
-	if self.y + 40 > self.ObjetCollision:getY() - 40 then 
+	if self.y + 40 > self.ObjetCollision:getY() - 40 and self.y + 40 < self.ObjetCollision:getY() + 60 then 
 		if self.x -40 > self.ObjetCollision:getX() - 47 and self.x -40 < self.ObjetCollision:getX() + 47 then
 			Game:resetAsteroid()
-			self.ObjetCollision:die()
+				self.ObjetCollision:die()
 		elseif self.x +40 > self.ObjetCollision:getX() - 47 and self.x +40 < self.ObjetCollision:getX() + 47 then
 			Game:resetAsteroid()
 			self.ObjetCollision:die()
@@ -49,7 +49,6 @@ function Enemy:Collision()
 end
 
 function Enemy:hit()
-	print("Touché")
 	self.x = math.random(0, application:getContentWidth())
 	self.y =  math.random(-100*application:getContentHeight()/100, -20*application:getContentHeight()/100)
 end
