@@ -11,20 +11,38 @@ local font1 = TTFont.new("fonts/visitor1.ttf", 75)
 bck = Bitmap.new(Texture.new("img/background.png", false))
 stage:addChild(bck)
 
+<<<<<<< HEAD
 
 
+=======
+fondB = Bitmap.new(Texture.new("img/fondB.png", false))
+stage:addChild(fondB)
+
+ombretop = Bitmap.new(Texture.new("img/ombretop.png", false))
+stage:addChild(ombretop)
+
+acc = Accelerometre.new()
+>>>>>>> kotasan
 
 ship1 = Ship.new(application:getContentWidth()/2,90*application:getContentHeight()/100)
 NRJ = Item.new(ship1)
 
 asteTab = {}
 
+<<<<<<< HEAD
 for i=1,20 do
+=======
+for i=1,8 do
+>>>>>>> kotasan
 	asteTab[i] = Enemy.new(ship1)
 end
 
 function Game:resetAsteroid()
+<<<<<<< HEAD
 	for i=1,#asteTab do
+=======
+	for i=1,8 do
+>>>>>>> kotasan
 		asteTab[i]:hit()
 	end
 end
@@ -80,6 +98,7 @@ local label = TextField.new(font1, score)
 label:setPosition(400, 150) 
 label:setTextColor(0xffffff)
 stage:addChild(label)
+<<<<<<< HEAD
 
 function Game:onEnterFrame(event)
 	label:setText(score)
@@ -89,6 +108,17 @@ end
 
 stage:addEventListener(Event.TOUCHES_END, onTouchesEnd)
 stage:addEventListener(Event.TOUCHES_BEGIN, onTouchesBegin)
+=======
+>>>>>>> kotasan
+
+function Game:onEnterFrame(event)
+	label:setText(score)
+end
 
 
+<<<<<<< HEAD
+=======
 
+stage:addEventListener(Event.TOUCHES_END, onTouchesEnd)
+stage:addEventListener(Event.TOUCHES_BEGIN, onTouchesBegin)
+>>>>>>> kotasan

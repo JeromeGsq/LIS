@@ -1,4 +1,5 @@
 <project>
+<<<<<<< HEAD
  <properties assetsOnly="0" packageName="com.yourdomain.yourapp" iosDevice="0" encryptAssets="0" logicalWidth="1080" mouseTouchOrder="0" autorotation="0" orientation="1" architecture="0" logicalHeight="1920" scaleMode="5" mouseToTouch="1" retinaDisplay="0" fps="60" touchToMouse="1" encryptCode="0">
   <imageScales/>
  </properties>
@@ -6,20 +7,30 @@
   <file source="font/visitor1.ttf"/>
  </folder>
  <file source="vie.lua"/>
+=======
+ <properties touchToMouse="1" mouseTouchOrder="0" iosDevice="0" assetsOnly="0" encryptAssets="0" logicalWidth="1080" orientation="1" autorotation="0" scaleMode="5" logicalHeight="1920" architecture="0" fps="60" encryptCode="0" mouseToTouch="1" retinaDisplay="0" packageName="com.yourdomain.yourapp">
+  <imageScales/>
+ </properties>
+ <file source="item.lua"/>
+ <folder name="fonts">
+  <file source="font/visitor1.ttf"/>
+ </folder>
+>>>>>>> kotasan
  <folder name="Img">
-  <file source="img/vaisseaux.png"/>
   <file source="img/UI.png"/>
-  <file source="img/ship.png"/>
-  <file source="img/ombretop.png"/>
-  <file source="img/nrj.png"/>
-  <file source="img/life.png"/>
-  <file source="img/grillesmall.png"/>
-  <file source="img/grillelarge.png"/>
-  <file source="img/fondB.png"/>
-  <file source="img/background.png"/>
   <file source="img/asteroid.png"/>
+  <file source="img/background.png"/>
+  <file source="img/fondB.png"/>
+  <file source="img/grillelarge.png"/>
+  <file source="img/grillesmall.png"/>
+  <file source="img/life.png"/>
+  <file source="img/nrj.png"/>
+  <file source="img/ombretop.png"/>
+  <file source="img/ship.png"/>
+  <file source="img/vaisseaux.png"/>
  </folder>
  <file source="Enemy.lua"/>
+<<<<<<< HEAD
  <file source="item.lua"/>
  <file source="main.lua"/>
  <file source="ship.lua"/>
@@ -29,4 +40,17 @@
  <dependency from="game.lua" to="vie.lua"/>
  <dependency from="game.lua" to="ship.lua"/>
  <dependency from="main.lua" to="game.lua"/>
+=======
+ <file source="accelerometre.lua"/>
+ <file source="game.lua"/>
+ <file source="grid.lua"/>
+ <file source="main.lua"/>
+ <file source="ship.lua"/>
+ <file source="vie.lua"/>
+ <dependency from="game.lua" to="ship.lua"/>
+ <dependency from="game.lua" to="grid.lua"/>
+ <dependency from="game.lua" to="item.lua"/>
+ <dependency from="item.lua" to="ship.lua"/>
+ <dependency from="ship.lua" to="vie.lua"/>
+>>>>>>> kotasan
 </project>
